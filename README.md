@@ -9,7 +9,7 @@ Vlastní elementy jsou pomocí argumentu data-dojo-type, který určuje jaký wi
 Dojo buď využiješ jenom na tohle, nebo použiješ i další věci (dojo-attach-point, eventy, již připravené widgety). Pokud bys použil jenom to jádro, jdou includnout jen ty soubory které používáš (dojo/core, dijit/TemplateMixin, ...), nemusíš includovat celej framework.
 
 # webcomponents
-Nová specifikace web components (https://en.wikipedia.org/wiki/Web_Components), která ještě není součástí všech prohlížečů (proto polyfill webcomponents-lite.min.js, který v případě nepodpory prohlížeče použije custom implementaci)
+Nová specifikace web components (https://en.wikipedia.org/wiki/Web_Components), která ještě není součástí všech prohlížečů (proto polyfill webcomponents-lite.min.js, který v případě nepodpory prohlížeče použije custom implementaci. V případě podpory nic nedělá (kromě jednoho IFu) a použije se nativní implementace)
 
 Jediný požadavek je, abys provedl registraci všech elementů na začátku, tj v každém tagu si do requirejs dal všechny tagy, které daný tag používá (což je common practice i v Doju nahoře)
 
