@@ -6,7 +6,7 @@ Vlastní elementy jsou pomocí argumentu data-dojo-type, který určuje jaký wi
 <div data-dojo-type="app/MyDivWidget"></div>
 ```
 
-Dojo buď využiješ jenom na tohle, nebo použiješ i další věci (dojo-attach-point, eventy, již připravené widgety).
+Dojo buď využiješ jenom na tohle, nebo použiješ i další věci (dojo-attach-point, eventy, již připravené widgety). Pokud bys použil jenom to jádro, jdou includnout jen ty soubory které používáš (dojo/core, dijit/TemplateMixin, ...), nemusíš includovat celej framework.
 
 # webcomponents
 Nová specifikace web components (https://en.wikipedia.org/wiki/Web_Components), která ještě není součástí všech prohlížečů (proto polyfill webcomponents-lite.min.js, který v případě nepodpory prohlížeče použije custom implementaci)
