@@ -1,6 +1,7 @@
 define([
     "MyTag",
-    "MyList"
+    "MyList",
+    "MyList1"
 ], function(MyTag){
    console.log("Loaded");
 });
