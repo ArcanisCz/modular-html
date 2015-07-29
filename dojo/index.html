@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>DOJO pokus</title>
+</head>
+<body>
+<script>
+    var dojoConfig = {
+        async: true,
+        packages: [{
+            name: "app",
+            location: "../../app"
+        }]
+    };
+</script>
+<script src="lib/dojo/dojo.js.uncompressed.js"></script>
+<script>
+    require([
+        "dojo/parser",
+        "dojo/ready",
+        "app/MyDivWidget"
+    ], function (parser, ready) {
+        ready(function(){
+            parser.parse();
+        });
+    });
+</script>
+    <div data-dojo-type="app/MyDivWidget"></div>
+</body>
+</html>
