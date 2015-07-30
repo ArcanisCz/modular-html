@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- Meta tags -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" lang="cz" content="CITS Project by CT Group">
+<meta name="author" content="Martin Zeman">
+<meta name="robots" content="index, follow">
+
+<title>Nástroje &lt; CITS Server</title>
+
+<!-- Favicon -->
+<!-- <link rel="icon" href="../../favicon.ico"> -->
+
+<!-- Style settings -->
+<!-- Bootstrap core -->
+<link type="text/css" rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+
+<!-- Bootstrap Datepicker -->
+<link type="text/css" rel="stylesheet" href="lib/datetimepicker/bootstrap-datetimepicker.min.css">
+
+<!-- Bootstrap TouchSpin -->
+<link type="text/css" rel="stylesheet" href="lib/touchspin/bootstrap-touchspin.min.css">
+
+<!-- Override CSS file -->
+<link type="text/css" rel="stylesheet" href="css/styles.css">
+<link type="text/css" rel="stylesheet" href="css/footer.css">
+
+<!-- HTML5 shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<div id="include-navigation"></div>
+
+<!-- Main jumbotron -->
+<div class="jumbotron" style="padding-bottom: 5px; padding-top: 5px;">
+    <div class="container">
+        <h2>Užitečné nástroje</h2>
+    </div>
+</div>
+<!-- /.jumbotron -->
+
+<style type="text/css">
+.btn-custom { min-width: 100px; }
+</style>
+
+<!-- Container -->
+<div class="container">
+    <h4>Převod mezi časem ISO 8601 a Unixovým časem</h4>
+    <div id="include-timestamp"></div>
+    <hr>
+</div>
+
+<div class="container">
+    <h4>Poznámky a komentáře</h4>
+    <div id="include-notes"></div>
+    <hr>
+</div>
+
+<!-- Breadcrumb -->
+<div id="include-breadcrumb"></div>
+
+<!-- Footer -->
+<div id="include-footer"></div>
+
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- RequireJS -->
+<!-- <script data-main="js/tools" src="lib/require/require-2.1.19.min.js"></script> -->
+<script src="lib/require/require-2.1.19.min.js"></script>
+<script type="text/javascript">
+/* exported pagename, funcname */
+require(["js/config"],
+function ()
+{
+    "use strict";
+    require([
+        "components/timestamp",
+        "components/notes"
+    ]);
+});
+var pagename = "Nástroje < CITS";
+var funcname = "";
+</script>
+
+</body>
+
+</html>

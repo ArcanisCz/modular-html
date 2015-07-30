@@ -1,0 +1,55 @@
+<div class="col-lg-1 col-md-4 col-sm-6 col-xs-12">
+    <div class="form-group" role="form">
+        <label class="control-label">Vypsat:</label><br>
+        <input type="text" class="form-control" id="event-length" value="30">
+    </div>
+</div>
+
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <label class="control-label">Od data:</label><br>
+    <!-- Datetime picker -->
+    <div class="input-group date" id="datetimepicker">
+        <input type="text" class="form-control">
+        <div class="input-group-addon">
+            <div class="glyphicon glyphicon-calendar"></div>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+    <div class="form-group">
+    <label class="control-label">Kolekce:</label><br>
+        <select class="form-control" id="event-collection">
+            <option value="parsed" selected>Zpracovaná</option>
+            <option value="raw">Původní</option>
+        </select>
+    </div>
+</div>
+
+<div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+    <div class="form-group">
+    <label class="control-label">Formát:</label><br>
+        <select class="form-control" id="event-format">
+            <option value="JSON" selected>JSON</option>
+            <option value="BSON">BSON</option>
+            <option value="CSV">CSV</option>
+            <option value="TSV">TSV</option>
+        </select>
+    </div>
+</div>
+
+<div class="col-lg-2 col-md-4 col-sm-6 col-xs-12" style="white-space: nowrap;">
+    <label class="control-label">Akce:</label><br>
+    <div class="btn-group" role="group">
+        <button type="submit" class="btn btn-success">Zpracovat</button>
+    </div>
+    <div class="btn-group" role="group" id="event-highlight">
+        <button class="btn btn-primary" id="button-highlight">Formátovat</button>
+    </div>
+    <div class="btn-group" role="group" id="event-download">
+        <button type="button" class="btn btn-default">Stáhnout</button>
+    </div>
+</div>
+
+<!-- Add the extra clearfix for only the required viewport -->
+<div class="clearfix visible-sm-block"></div>

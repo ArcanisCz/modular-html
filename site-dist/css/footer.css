@@ -1,0 +1,43 @@
+body
+{
+    /* Margin bottom by footer height */
+    margin-bottom: 175px;
+}
+
+
+/*
+ * Footer
+ */
+.footer
+{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 175px;
+
+  text-align: center;
+  padding: 20px 0 20px 0;
+  /*margin-top: 20px;*/
+  border-top: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+}
+
+.footer p
+{
+  margin-bottom: 0;
+  color: #777;
+}
+.footer-links
+{
+  margin: 10px 0;
+}
+.footer-links li
+{
+  display: inline;
+  padding: 0 2px;
+}
+.footer-links li:first-child
+{
+  padding-left: 0;
+}

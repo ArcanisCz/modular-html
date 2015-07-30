@@ -1,0 +1,130 @@
+/*------------------------------------*\
+ #OVERRIDE STLES
+
+ This style sheet can be used for two different functions:
+
+ 1. Override specific Bootstrap styles.
+ 2. Add your own styles.
+\*------------------------------------*/
+
+/**
+ * Padding-top is required if using .navbar-fixed-top.
+ * This can be removed Remove if using .navbar-static-top.
+ * The height may need to be changed if the height of you
+ * navigation changes.
+*/
+
+/* Body and structure
+-------------------------------------------------- */
+html
+{
+  position: relative;
+  min-height: 100%;
+}
+
+body
+{
+    /*font-size: 13px;*/
+
+    /* Move down content because we have a fixed navbar that is 50px tall */
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    /* Margin bottom by footer height */
+    /*margin-bottom: 175px;*/
+}
+
+.navbar
+{
+    vertical-align: bottom;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/**
+ * Bootstrap requires a containing element to wrap site contents
+ * and house the grid system. You may choose one of two containers.
+ * Use .container for a responsive fixed width container.
+ * Use .container-fluid for a full width container.
+
+ * If using container-fluid, you may need to set a maximum width,
+ * so that the container will not spread to the entire viewport.
+*/
+.container-fluid
+{
+    /*max-width: 1200px;*/
+}
+
+.btn-custom
+{
+    min-width: 100px;
+}
+
+/* Table highlighting on mouseover */
+.table-hover > tbody > tr:hover {
+    background-color: #faf2cc;
+}
+
+/**
+ * Open Layers 3
+ */
+.map
+{
+    height: 500px;
+    width: 100%;
+    margin-top: 0;
+    border-style: solid;
+    border-width: 3px;
+}
+
+/**
+ * The zoomslider in the second map shall be placed between the zoom-in and
+ * zoom-out buttons.
+ */
+.ol-zoom .ol-zoom-out
+{
+    margin-top: 204px;
+}
+
+.ol-zoomslider
+{
+    background-color: transparent;
+    top: 2.3em;
+}
+
+.ol-touch .ol-zoom .ol-zoom-out
+{
+    margin-top: 212px;
+}
+
+.ol-touch .ol-zoomslider
+{
+    top: 2.75em;
+}
+
+.ol-zoom-in.ol-has-tooltip:hover [role=tooltip],
+.ol-zoom-in.ol-has-tooltip:focus [role=tooltip]
+{
+    top: 3px;
+}
+
+.ol-zoom-out.ol-has-tooltip:hover [role=tooltip],
+.ol-zoom-out.ol-has-tooltip:focus [role=tooltip]
+{
+    top: 232px;
+}
+
+/*
+ * Google Code Prettify
+ */
+li.L0, li.L1, li.L2, li.L3,
+li.L5, li.L6, li.L7, li.L8
+{ list-style-type: decimal !important }
+
+
+pre
+{
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+}
