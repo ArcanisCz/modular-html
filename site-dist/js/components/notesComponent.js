@@ -4,9 +4,9 @@ define([
     "underscore",
     "backbone"
 ], function (customComponent, $, _, Backbone) {
-    function initialize(selector, templateSelector){
-        customComponent.simpleComponent(selector, templateSelector, createdCallback);
-    }
+    return function(selector, templateSelector){
+        customComponent(selector, templateSelector, createdCallback);
+    };
 
     function createdCallback(element){
         var Note = Backbone.Model.extend({
@@ -45,9 +45,5 @@ define([
             }
         });
         var appview = new AppView;
-    }
-
-    return {
-        initialize: initialize
     }
 });

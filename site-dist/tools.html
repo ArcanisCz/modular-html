@@ -41,7 +41,7 @@
 
 </head>
 
-<body>
+<body style="display: none">
 
 <!-- Navigation -->
 <div id="include-navigation"></div>
@@ -91,15 +91,19 @@ function ()
 {
     "use strict";
     require([
+        "jquery",
         "components/customComponent",
-        "components/notesComponent"
-    ], function(customComponent, notesComponent){
-        customComponent.commonInclude("#include-footer", "#template-footer");
-        customComponent.commonInclude("#include-navigation", "#template-navigation");
-        customComponent.simpleComponent("#include-breadcrumb", "#template-breadcrumb", function(element){
+        "components/notesComponent",
+        "components/timestampComponent"
+    ], function($,customComponent, notesComponent, timestampComponent){
+        customComponent("#include-footer", "#template-footer");
+        customComponent("#include-navigation", "#template-navigation");
+        customComponent("#include-breadcrumb", "#template-breadcrumb", function(element){
             element.querySelector("#include-name").innerHTML = pagename;
         });
-        notesComponent.initialize("#include-notes", "#template-notes");
+        notesComponent("#include-notes", "#template-notes");
+        timestampComponent("#include-timestamp", "#template-timestamp");
+        $(document.body).show();
     });
 });
 </script>
