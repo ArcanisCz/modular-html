@@ -46,7 +46,6 @@
     console.log("Initializing module controls/timestamp");
 
     $("#include-timestamp").html(view); // Tohle bych chtěl aby bylo v rámci common.draw, ale když to tam dám, tak to nefunguje!?
-    console.log("VIEW1",view);
     common.draw();
 
     touchspin.initialize();

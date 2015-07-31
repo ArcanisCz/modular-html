@@ -1,0 +1,108 @@
+<template id="template-footer">
+    <footer class="footer">
+        <p>Tento software je licencován dle podmínek licence <a href="http://opensource.org/licenses/MIT">MIT Open Source Initiative</a>.</p>
+        <p>Aplikace používá ve svém zdrojovém kódu následující softwarové balíčky a služby:</p>
+        </p>
+        <ul class="footer-links">
+            <li><a href="http://jquery.com">jQuery</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="http://getbootstrap.com">Bootstrap</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="http://momentjs.com/">moments</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="https://eonasdan.github.io/bootstrap-datetimepicker/">Datepicker</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="http://openlayers.org/">Open Layers 3</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="https://www.openstreetmap.org/">OpenStreetMap</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="https://www.bing.com/maps/">Bing Maps</a></li>
+            <li class="muted">&middot;</li>
+            <!--
+            <li><a href="http://www.mapquest.com/">MapQuest</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="https://www.python.org/download/releases/3.0/">python 3</a></li>
+            <li class="muted">&middot;</li>
+            -->
+            <li><a href="http://www.cherrypy.org/">CherryPy</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="http://www.makotemplates.org/">mako</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="http://pytz.sourceforge.net/">pytz</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="http://api.mongodb.org/python/current/">PyMongo</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="https://www.mongodb.org/">MongoDB</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="https://github.com/google/code-prettify">Code Prettify</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="http://www.virtuosoft.eu/code/bootstrap-touchspin/">TouchSpin</a></li>
+        </ul>
+        <p>
+            &copy; Aplikaci navrhl a vyvinul  <!-- <a href="https://github.com/N4M3Z">Martin Zeman</a> v rámci projektu CITS pro --> <a href="http://http://www.cortec.cz/">CORTEC s.r.o.</a> v roce 2015
+            &middot; verze 1.1
+        </p>
+    </footer>
+</template>
+
+<template id="template-navigation">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/index">CITS Dispečer</a>
+            </div>
+            <!-- /.navbar-header -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/monitor">Monitor</a></li>
+                    <li><a href="/stream">Záznamy</a></li>
+                    <li><a href="/log">Výpisy</a></li>
+                    <li><a href="/help">Dokumentace</a></li>
+                    <li><a href="/tools">Nástroje</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/ndic">NDIC</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- /.navbar -->
+</template>
+
+<template id="template-breadcrumb">
+    <div class="container-fluid">
+        <!-- Page breadcrumb -->
+        <ol class="breadcrumb">
+            <li><a href="/index">
+                CITS Server</a>
+            </li>
+            <li class="active">
+                <span id="include-name"></span>
+            </li>
+        </ol>
+        <!-- /.breadcrumb -->
+    </div>
+</template>
+
+<template id="template-notes">
+    <div class="row">
+        <div class="col-sm-2 col-xs-12">
+            <!-- <label class="control-label">Jednoduché poznámky:</label><br> -->
+            <button class="btn btn-primary btn-custom" id="btn-addnote" type="reset">Přidat poznámku</button>
+        </div>
+        <div class="col-sm-10 col-xs-12">
+            <ul id="include-list" class="list-group"></ul>
+        </div>
+    </div>
+</template>
