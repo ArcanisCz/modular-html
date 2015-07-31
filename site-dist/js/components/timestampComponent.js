@@ -8,14 +8,14 @@ define([
     "collapse",
     "datetimepicker"
 ], function (customComponent, $, moment) {
-    return function(selector, templateSelector) {
-        customComponent(selector, templateSelector, createdCallback);
+    return function(parentElement, selector) {
+        customComponent(parentElement, selector, "#template-timestamp", createdCallback);
     };
 
     function createdCallback(element) {
-        var timestep = $(element).find("#timestep");
-        var timestamp = initTouchspin($(element).find("#timestamp"), timestep);
-        var datepicker = initDatetimepicker($(element).find("#datetimepicker"));
+        var timestep = $(element).find(".timestep");
+        var timestamp = initTouchspin($(element).find(".timestamp"), timestep);
+        var datepicker = initDatetimepicker($(element).find(".datetimepicker"));
 
         timestamp.val(toUnix(datepicker));
 
@@ -23,7 +23,7 @@ define([
             timestamp.val(toUnix(datepicker));
         });
         timestamp.change(function () {
-            $("#datetimepicker").data("DateTimePicker").date(fromUnix(timestamp));
+            datepicker.data("DateTimePicker").date(fromUnix(timestamp));
         });
 
         $("#event-process").click(function(){

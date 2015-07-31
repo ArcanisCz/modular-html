@@ -112,7 +112,7 @@
         <div class="col-sm-4 col-xs-12">
             <label class="control-label">Čas ISO 8601:</label><br>
             <!-- Datetime picker -->
-            <div class="input-group date" id="datetimepicker">
+            <div class="input-group date datetimepicker">
                 <input type="text" class="form-control">
                 <div class="input-group-addon">
                     <div class="glyphicon glyphicon-calendar"></div>
@@ -123,13 +123,13 @@
         <div class="col-sm-4 col-xs-12">
             <label class="control-label">Unixový čas:</label><br>
             <div class="input-group" role="group">
-                <input id="timestamp" type="text" class="form-control" value="0">
+                <input type="text" class="form-control timestamp" value="0">
             </div>
         </div>
         <div class="col-sm-2 col-xs-6" style="white-space: nowrap;">
             <label class="control-label">Krok:</label><br>
             <div class="input-group" role="group">
-                <input id="timestep" type="text" class="form-control" value="600">
+                <input type="text" class="form-control timestep" value="600">
                 <span class="input-group-addon">[s]</span>
             </div>
         </div>
@@ -144,4 +144,9 @@
             </div>
         </div>
     </div>
+</template>
+
+<template id="template-nested">
+    <div id="comp1"></div>
+    <div id="comp2"></div>
 </template>

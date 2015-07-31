@@ -4,8 +4,8 @@ define([
     "underscore",
     "backbone"
 ], function (customComponent, $, _, Backbone) {
-    return function(selector, templateSelector){
-        customComponent(selector, templateSelector, createdCallback);
+    return function(parentElement, selector){
+        customComponent(parentElement, selector, "#template-notes", createdCallback);
     };
 
     function createdCallback(element){

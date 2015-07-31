@@ -71,6 +71,8 @@
     <hr>
 </div>
 
+<div id="include-nested"></div>
+
 <!-- Breadcrumb -->
 <div id="include-breadcrumb"></div>
 
@@ -84,7 +86,7 @@
 <script type="text/javascript">
 /* exported pagename, funcname */
 var pagename = "Nástroje < CITS";
-var funcname = ""
+var funcname = "";
 
 require(["js/config"],
 function ()
@@ -96,13 +98,17 @@ function ()
         "components/notesComponent",
         "components/timestampComponent"
     ], function($,customComponent, notesComponent, timestampComponent){
-        customComponent("#include-footer", "#template-footer");
-        customComponent("#include-navigation", "#template-navigation");
-        customComponent("#include-breadcrumb", "#template-breadcrumb", function(element){
+        customComponent(document,"#include-footer", "#template-footer");
+        customComponent(document,"#include-navigation", "#template-navigation");
+        customComponent(document,"#include-breadcrumb", "#template-breadcrumb", function(element){
             element.querySelector("#include-name").innerHTML = pagename;
         });
-        notesComponent("#include-notes", "#template-notes");
-        timestampComponent("#include-timestamp", "#template-timestamp");
+        notesComponent(document,"#include-notes");
+        timestampComponent(document,"#include-timestamp");
+        customComponent(document,"#include-nested", "#template-nested", function(element){
+            timestampComponent(element, "#comp1");
+            timestampComponent(element, "#comp2");
+        });
         $(document.body).show();
     });
 });
